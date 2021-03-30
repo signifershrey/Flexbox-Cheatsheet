@@ -1,0 +1,29 @@
+body {
+  background-color: #50d890;
+}
+
+.flex-container {
+  height: 280px;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.start {
+  align-content: flex-start;
+}
+
+.end {
+  align-content: flex-end;
+}
+
+.center {
+  align-content: center;
+}
+.space-between {
+  align-content: space-between;
+}
+
+.space-around {
+  align-content: space-around;
+}

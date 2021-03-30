@@ -1,0 +1,35 @@
+body {
+  background-color: #3fc5f0;
+}
+
+.head-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-container {
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 600px;
+}
+
+.flex-container > * {
+  width: 250px;
+}
+
+.sample1 > * {
+  flex-shrink: 1;
+}
+
+.sample2 div:nth-child(2) {
+  flex-shrink: 0;
+}
+
+.sample3 div:nth-child(2) {
+  flex-shrink: 2;
+}
+
+.sample3 div:nth-child(3) {
+  flex-shrink: 3;
+}

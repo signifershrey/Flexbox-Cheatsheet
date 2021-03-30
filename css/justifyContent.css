@@ -1,0 +1,32 @@
+body {
+  background-color: #9ad3bc;
+}
+
+.flex-container {
+  flex-direction: row;
+}
+
+.start {
+  justify-content: flex-start;
+}
+
+.end {
+  justify-content: flex-end;
+}
+
+.center {
+  justify-content: center;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+.space-between {
+  justify-content: space-between;
+}
+
+.column-center {
+  justify-content: space-between;
+  flex-direction: column;
+  height: 500px;
+}
