@@ -1,84 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flexbox Cheatsheet</title>
-    <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
-    <link rel="stylesheet" href="./css/boilerplate.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="shortcut icon" href="assests/favion.svg" />
 
-</head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin Sans"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/boilerplate.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
 
-<body>
-
-
+  <body>
     <h1 class="ml6">
-        <span class="text-wrapper">
-            <span class="letters">Flexbox Cheatsheet</span>
-        </span>
+      <span class="text-wrapper">
+        <span class="letters">Flexbox Cheatsheet</span>
+      </span>
     </h1>
 
-
     <div class="body">
-        <div class="head-container">
-            <h2 class="text-center">Parent Element - Flex Container</h2>
+      <div class="head-container">
+        <h2 class="text-center">Parent Element - Flex Container</h2>
 
-
-
-            <div class="container">
-                <a href="flexDirection.html">Flex Direction</a>
-                <a href="justifyContent.html">Justify Content</a>
-                <a href="alignItems.html">Align Items</a>
-            </div>
-            <div class="container">
-                <a href="flexWrap.html">Flex Wrap</a>
-                <a href="alignContent.html">Align Content</a>
-            </div>
+        <div class="container">
+          <a href="flexDirection.html">Flex Direction</a>
+          <a href="justifyContent.html">Justify Content</a>
+          <a href="alignItems.html">Align Items</a>
         </div>
-
-        <div class="head-container">
-            <h2 class="text-center">Child Elements - Flex Items</h2>
-
-            <div class="container">
-                <a href="order.html">Order</a>
-                <a href="alignSelf.html">Align Self</a>
-                <a href="flexGrow.html">Flex Grow</a>
-                <a href="flexShrink.html">Flex Shrink</a>
-                <a href="flexBasis.html">Flex Basis</a>
-            </div>
+        <div class="container">
+          <a href="flexWrap.html">Flex Wrap</a>
+          <a href="alignContent.html">Align Content</a>
         </div>
+      </div>
+
+      <div class="head-container">
+        <h2 class="text-center">Child Elements - Flex Items</h2>
+
+        <div class="container">
+          <a href="order.html">Order</a>
+          <a href="alignSelf.html">Align Self</a>
+          <a href="flexGrow.html">Flex Grow</a>
+          <a href="flexShrink.html">Flex Shrink</a>
+          <a href="flexBasis.html">Flex Basis</a>
+        </div>
+      </div>
     </div>
-
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
     <script>
-        // Wrap every letter in a span
-        var textWrapper = document.querySelector('.ml6 .letters');
-        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+      // Wrap every letter in a span
+      var textWrapper = document.querySelector(".ml6 .letters");
+      textWrapper.innerHTML = textWrapper.textContent.replace(
+        /\S/g,
+        "<span class='letter'>$&</span>"
+      );
 
-        anime.timeline({ loop: true })
-            .add({
-                targets: '.ml6 .letter',
-                translateY: ["1.1em", 0],
-                translateZ: 0,
-                duration: 750,
-                delay: (el, i) => 50 * i
-            }).add({
-                targets: '.ml6',
-                opacity: 0,
-                duration: 1000,
-                easing: "easeOutExpo",
-                delay: 1000
-            });
+      anime
+        .timeline({ loop: true })
+        .add({
+          targets: ".ml6 .letter",
+          translateY: ["1.1em", 0],
+          translateZ: 0,
+          duration: 750,
+          delay: (el, i) => 50 * i,
+        })
+        .add({
+          targets: ".ml6",
+          opacity: 0,
+          duration: 1000,
+          easing: "easeOutExpo",
+          delay: 1000,
+        });
 
-        //
-
+      //
     </script>
-
-</body>
-
+  </body>
 </html>
